@@ -3,7 +3,7 @@
 const After = require('./src/components/After');
 const Before = require('./src/components/Before');
 const FirstLetter = require('./src/components/FirstLetter');
-const Hover = require('./src/components/Hoever');
+const Hover = require('./src/components/Hover');
 const Link = require('./src/components/Link');
 
 exports.After = After;
