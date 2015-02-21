@@ -1,0 +1,24 @@
+{
+  "name": "react-style-components",
+  "version": "0.0.1",
+  "description": "Styling For React Components",
+  "scripts": {
+    "start": "iojs server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshblack/react-style-components.git"
+  },
+  "main": "index.js",
+  "keywords": [
+    "react",
+    "reactjs"
+  ],
+  "author": "Josh Black <joshuatblack@ufl.edu> (http://github.com/joshblack)",
+  "bugs": {
+    "url": "https://github.com/joshblack/react-style-components/issues"
+  },
+  "dependencies": {
+    "react": "^0.12.0"
+  }
+}
