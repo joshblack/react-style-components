@@ -4,7 +4,7 @@ const React = require('react');
 const Hover = require('./Hover');
 const assign = require('../stubs/Object.assign');
 const css = require('../core/css');
-const sx = require('../src/stubs/sx');
+const sx = require('../stubs/sx');
 
 const Link = React.createClass({
 
