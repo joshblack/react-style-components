@@ -103,3 +103,27 @@ var firstLetterExampleStyles = `
 `;
 
 exports.firstLetterStyles = css(firstLetterExampleStyles);
+
+var firstChildExampleStyles = `
+  ul {
+    list-style: circle;
+  }
+
+  ul:first-child {
+    font-size: 32px;
+  }
+`;
+
+exports.firstChildStyles = css(firstChildExampleStyles);
+
+var lastChildExampleStyles = `
+  ul {
+    list-style: circle;
+  }
+
+  ul:last-child {
+    font-size: 32px;
+  }
+`;
+
+exports.lastChildStyles = css(lastChildExampleStyles);

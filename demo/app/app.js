@@ -5,6 +5,7 @@ const ReactStyles = require('../../index');
 const { Hover, After, Before, Link, FirstLetter } = ReactStyles;
 const styles = require('./styles');
 const sx = require('../../src/stubs/sx');
+const sxw = require('../../src/stubs/sxw');
 
 const HoverExample = React.createClass({
     mixins: [Hover],
@@ -74,7 +75,6 @@ const LinkExample = React.createClass({
 });
 
 const FirstLetterExample = React.createClass({
-
     getDefaultProps () {
         return { style: styles.firstLetterStyles }
     },
@@ -86,7 +86,50 @@ const FirstLetterExample = React.createClass({
             </FirstLetter>
         );
     }
+});
 
+const FirstChildExample = React.createClass({
+  getDefaultProps () {
+    return {
+      style: styles.firstChildStyles
+    }
+  },
+
+  render () {
+    let style = sxw(this.props.style, ['ul:first-child']);
+
+    return (
+      <ul style={style}>
+        <li style={this.props.style['ul:first-child']}>Item #1</li>
+        <li>Item #2</li>
+        <li>Item #3</li>
+        <li>Item #4</li>
+        <li>Item #5</li>
+      </ul>
+    );
+  }
+});
+
+const LastChildExample = React.createClass({
+  getDefaultProps () {
+    return {
+      style: styles.lastChildStyles
+    }
+  },
+
+  render () {
+    let style = sxw(this.props.style, ['ul:last-child']);
+
+    return (
+      <ul style={style}>
+        <li>Item #1</li>
+        <li>Item #2</li>
+        <li>Item #3</li>
+        <li>Item #4</li>
+        <li style={this.props.style['ul:last-child']}>Item #5</li>
+      </ul>
+    );
+  }
 });
 
 const App = React.createClass({
@@ -113,6 +156,13 @@ const App = React.createClass({
                 <h3><code>::after</code></h3>
                 <AfterExample/>
 
+                <h1>Position/Number-based pseudo class selectors</h1>
+                <h3><code>:first-child</code></h3>
+                <FirstChildExample/>
+
+                <h1>Position/Number-based pseudo class selectors</h1>
+                <h3><code>:last-child</code></h3>
+                <LastChildExample/>
 
             </div>
         );
